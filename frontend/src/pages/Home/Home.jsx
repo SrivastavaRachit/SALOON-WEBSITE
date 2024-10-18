@@ -7,6 +7,8 @@ import AsSeen from '../../components/AsSeen/AsSeen'
 import ContactTime from '../../components/ContactTime/ContactTime'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
+import FollowUs from '../../components/FollowUs/FollowUs'
+import Instagram from '../../components/Instagram/Instagram'
 
 const Home = () => {
     return (
@@ -17,6 +19,8 @@ const Home = () => {
                 <ServiceHero />
                 <OurStory />
                 <AsSeen/>
+                <FollowUs/>
+                <Instagram/>
                 <ContactTime />
                 <Footer/>
             </div>

@@ -9,6 +9,15 @@ export default {
       colors: {
         'brown-900': '#4B3F39',
         'pink-300': '#F3BDBA',
+        'pink-400': '#FF89B3',
+       
+          peach: '#FBCAB9',
+          blush: '#FCE4DA',
+          coral: '#F7AB91',
+          dark: '#D57554',
+      },
+      fontFamily: {
+        'playfair': ['Playfair Display', 'serif', 'Indie Flower', 'cursive'],
       },
     },
   },

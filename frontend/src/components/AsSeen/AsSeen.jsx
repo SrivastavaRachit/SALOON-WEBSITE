@@ -1,30 +1,35 @@
-import React from 'react'
+import React from 'react';
 
-import BGCURVE from '../../assets/curvebg.png'
+import BGCURVE from '../../assets/curveBG.jpg';
 
 const AsSeen = () => {
     return (
-        <div>
-            <div className="flex items-center justify-center py-10 px-6 sm:px-8 lg:px-12" >
-                <div className="relative w-full max-w-screen-2xl p-8 text-center rounded-lg 
-               overflow-hidden"
-                    style={{
-                        backgroundImage: `url(${BGCURVE})`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover",
-                    }}>
-                    <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-4">As Seen On</h2>
-                    <p className="text-lg sm:text-xl lg:text-2xl font-medium text-gray-800 italic mb-6">
-                        "The place with its constant excellence, soul, and style"
-                    </p>
-                    <button className="px-4 py-2 font-semibold text-gray-800 border 
-               rounded-full hover:bg-[#ffe9e4] hover:text-gray-900 transition duration-300 ease-in-out">
-                        Learn More
-                    </button>
-                </div>
-            </div>
-        </div>
-    )
-}
+        <section className="relative w-full min-h-screen flex items-center justify-center">
+            {/* Background with overlay */}
+            <div
+                className="absolute inset-0 w-full h-full bg-no-repeat bg-cover z-0"
+                style={{
+                    backgroundImage: `url(${BGCURVE})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            ></div>
 
-export default AsSeen
+            {/* Dark overlay for contrast */}
+          
+
+            {/* Content */}
+            <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-4 py-8">
+                <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-white mb-4">As Seen On</h2>
+                <p className="text-lg sm:text-xl lg:text-2xl font-medium text-white italic mb-6">
+                    "The place with its constant excellence, soul, and style"
+                </p>
+                <button className="px-4 py-2 font-semibold text-white border border-white rounded-xl hover:bg-white hover:text-gray-900 transition duration-300 ease-in-out">
+                    Learn More
+                </button>
+            </div>
+        </section>
+    );
+};
+
+export default AsSeen;

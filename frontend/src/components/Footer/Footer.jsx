@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <>
-            <footer className="bg-pink-50 py-10">
+            <footer className="bg-peach pt-10">
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
 
                     {/* Left side - Salon Logo and Tagline */}
@@ -20,11 +20,11 @@ const Footer = () => {
                     </div>
 
                     {/* Center - Navigation Links */}
-                    <div className="mt-10 md:mt-0 text-center space-y-3 text-gray-800">
-                        <p className="font-semibold hover:text-orange-300 cursor-pointer">Home</p>
-                        <p className="font-semibold hover:text-orange-300 cursor-pointer">About Us</p>
-                        <p className="font-semibold hover:text-orange-300 cursor-pointer">Service Menu</p>
-                        <p className="font-semibold hover:text-orange-300 cursor-pointer">Our Story</p>
+                    <div className="mt-10 md:mt-0 text-center space-y-3 text-gray-800 md:text-left">
+                        <p className="font-semibold hover:text-dark cursor-pointer">Home</p>
+                        <p className="font-semibold hover:text-dark cursor-pointer">About Us</p>
+                        <p className="font-semibold hover:text-dark cursor-pointer">Service Menu</p>
+                        <p className="font-semibold hover:text-dark cursor-pointer">Our Story</p>
                     </div>
 
                     {/* Right side - Contact Us */}
@@ -35,14 +35,14 @@ const Footer = () => {
                             for the latest news
                         </p>
                         <div className="flex justify-center md:justify-end space-x-6 mt-4">
-                            <FaFacebookF className="text-2xl text-gray-600 hover:text-orange-300 transition duration-300 cursor-pointer" />
-                            <FaInstagram className="text-2xl text-gray-600 hover:text-orange-300 transition duration-300 cursor-pointer" />
+                            <FaFacebookF className="text-2xl text-gray-600 hover:text-dark transition duration-300 cursor-pointer" />
+                            <FaInstagram className="text-2xl text-gray-600 hover:text-dark transition duration-300 cursor-pointer" />
                         </div>
                     </div>
                 </div>
                 <hr />
                 {/* Footer Bottom Text */}
-                <div className="mt-10 text-center text-gray-600 text-sm">
+                <div className=" pt-10 bg-dark text-center text-white text-sm">
                     2024 Salon All rights reserved.
                 </div>
             </footer>
