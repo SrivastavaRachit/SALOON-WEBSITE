@@ -1,6 +1,5 @@
 // ContactTime.jsx
 import React from 'react';
-import { FaPhone, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 import Lottie from 'lottie-react';
 import animationData from '../../assets/time.json';
 import animationData2 from '../../assets/contact.json';
@@ -56,7 +55,6 @@ const ContactTime = () => {
           <div className="bg-peach p-4 rounded-full mb-3">
             <ServiceItem
               icon={<Lottie animationData={animationData3} loop={true} />}
-             
             />
           </div>
           <h3 className="text-lg font-bold tracking-wider text-black">LOCATION</h3>
