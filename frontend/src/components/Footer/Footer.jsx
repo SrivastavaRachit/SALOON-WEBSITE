@@ -2,6 +2,7 @@ import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 import FooterImg from '../../assets/footercurve.png'
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
 
@@ -14,22 +15,24 @@ const Footer = () => {
                     <div className="flex flex-col items-center md:items-start">
                         <div className="relative flex items-center justify-center">
                             <div className="w-48 h-48 flex items-center justify-center">
-                                <img src={FooterImg} alt="" />
+                                <NavLink to='/'>
+                                    <img src={FooterImg} alt="" />
+                                </NavLink>
                             </div>
                         </div>
                     </div>
 
                     {/* Center - Navigation Links */}
-                    <div className="mt-10 md:mt-0 text-center space-y-3 text-gray-800 md:text-left">
-                        <p className="font-semibold hover:text-dark cursor-pointer">Home</p>
-                        <p className="font-semibold hover:text-dark cursor-pointer">About Us</p>
-                        <p className="font-semibold hover:text-dark cursor-pointer">Service Menu</p>
-                        <p className="font-semibold hover:text-dark cursor-pointer">Our Story</p>
+                    <div className="mt-10 md:mt-0 flex flex-col text-center space-y-3 text-gray-800 md:text-left">
+                        <NavLink to='/' className="font-semibold hover:text-dark cursor-pointer">Home</NavLink>
+                        <NavLink to='/about' className="font-semibold hover:text-dark cursor-pointer">About Us</NavLink>
+                        <NavLink to='/service' className="font-semibold hover:text-dark cursor-pointer">Service Menu</NavLink>
+                        <NavLink to='/our-story' className="font-semibold hover:text-dark cursor-pointer">Our Story</NavLink>
                     </div>
 
                     {/* Right side - Contact Us */}
                     <div className="mt-10 md:mt-0 text-center md:text-right">
-                        <h4 className="font-bold text-lg text-gray-800">Contact Us</h4>
+                        <NavLink to='/contact' className="font-bold text-lg text-gray-800">Contact Us</NavLink>
                         <p className="text-gray-600 mt-2">
                             Don’t miss promotions, follow us <br />
                             for the latest news

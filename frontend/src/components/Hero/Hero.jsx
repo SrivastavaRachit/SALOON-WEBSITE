@@ -1,6 +1,8 @@
 import React from 'react';
 import img from '../../assets/bg.jpg'
 
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
     return (
         <div className="relative w-full min-h-screen bg-brown-900 text-white flex flex-col items-center justify-center">
@@ -17,10 +19,14 @@ const Hero = () => {
                 </h1>
                 <div className="mt-6 md:mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
                     <button className="bg-peach text-black font-bold  px-4 py-3 rounded-lg hover:bg-coral transition duration-300">
+                        <Link to='/book'>
                         Book Appointment
+                        </Link>
                     </button>
                     <button className="border-2 border-peach font-bold text-peach px-8 py-3 rounded-lg hover:bg-coral hover:text-black transition duration-300">
+                        <Link to='/service'>
                         Service Menu
+                        </Link>
                     </button>
                 </div>
             </div>

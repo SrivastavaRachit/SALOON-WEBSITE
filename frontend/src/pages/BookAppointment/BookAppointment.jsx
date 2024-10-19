@@ -4,12 +4,12 @@ import Footer from '../../components/Footer/Footer'
 
 const BookAppointment = () => {
     return (
-        <> <Navbar/>
+        <>
+            <Navbar />
             <section>
-                
 
             </section>
-            <Footer/>
+            <Footer />
         </>
     )
 }
