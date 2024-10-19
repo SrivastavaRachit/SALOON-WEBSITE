@@ -15,6 +15,7 @@ export default {
           blush: '#FCE4DA',
           coral: '#F7AB91',
           dark: '#D57554',
+          purplish: '#bd0d50'
       },
       fontFamily: {
         'playfair': ['Playfair Display', 'serif', 'Indie Flower', 'cursive'],

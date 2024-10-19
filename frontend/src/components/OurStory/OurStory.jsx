@@ -37,7 +37,7 @@ const OurStory = () => {
                         the best quality, hire the best specialists, and provide the best customer service. This approach has
                         allowed us to grow and create an awesome team passionate about everything we do.
                     </p>
-                    <button className="px-6 py-3 border border-gray-800 text-gray-800 font-semibold rounded-lg hover:bg-gray-800 hover:text-white transition duration-300 ease-in-out">
+                    <button className="px-6 py-3 border border-purplish text-purplish font-semibold rounded-lg hover:bg-purplish   hover:text-peach transition duration-300 ease-in-out">
                         Learn More
                     </button>
                 </div>
