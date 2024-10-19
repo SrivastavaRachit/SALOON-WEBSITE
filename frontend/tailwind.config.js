@@ -10,7 +10,7 @@ export default {
         'brown-900': '#4B3F39',
         'pink-300': '#F3BDBA',
         'pink-400': '#FF89B3',
-       
+
           peach: '#FBCAB9',
           blush: '#FCE4DA',
           coral: '#F7AB91',

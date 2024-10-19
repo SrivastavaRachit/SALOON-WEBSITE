@@ -14,10 +14,8 @@ const AsSeen = () => {
                     backgroundPosition: 'center',
                 }}
             ></div>
-
+            
             {/* Dark overlay for contrast */}
-          
-
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-4 py-8">
                 <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-white mb-4">As Seen On</h2>
