@@ -25,6 +25,12 @@ const BookAppointment = () => {
     const handleContinue = () => {
         if (currentStep < 3) setCurrentStep(currentStep + 1);
         else {
+            // Ensure all fields are filled before booking
+            const { name, phone, email } = userInfo;
+            if (!name || !phone || !email || !selectedDate) {
+                alert("Please fill in all the required fields before proceeding.");
+                return;
+            }
             setIsBooked(true);
             sendWhatsAppMessage();
         }
