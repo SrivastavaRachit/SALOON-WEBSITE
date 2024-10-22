@@ -20,7 +20,7 @@
   position: absolute;
   width: 15px;
   height: 15px;
-  background-color: #F7AB91;
+  background-color: #bd0d50;
   border-radius: 50%;
   animation: float 6s ease-in-out infinite;
   opacity: 0.8;
@@ -73,3 +73,34 @@
   top: 60%;
   animation: float 5s ease-in-out infinite;
 }
+
+@media (max-width: 768px) {
+  footer {
+      margin-top: 20px; /* Add margin to prevent overlap */
+      flex-direction: column; /* Stack items vertically */
+      padding-left: 16px; /* Adjust padding for mobile view */
+      padding-right: 16px; /* Adjust padding for mobile view */
+      align-items: center; /* Center items horizontally */
+      text-align: center; /* Center text */
+  }
+
+  footer div {
+      padding-left: 0; /* Remove additional padding for mobile */
+      padding-right: 0; /* Remove additional padding for mobile */
+      margin-bottom: 10px; /* Add space between sections */
+  }
+
+  footer h3 {
+      font-size: 1rem; /* Adjust font size for mobile */
+  }
+
+  footer p {
+      font-size: 0.875rem; /* Adjust font size for mobile */
+  }
+}
+.zeyada-regular {
+  font-family: "Zeyada", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+

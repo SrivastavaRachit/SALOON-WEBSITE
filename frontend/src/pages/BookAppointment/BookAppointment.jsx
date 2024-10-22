@@ -1,7 +1,15 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Banner from '../../components/Banner/Banner';
-import img from '../../assets/b2.jpg';
+import img from '../../assets/b1.jpg'; // Corrected import statement
+
+<div className="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/4">
+    <img 
+        src={img} // Corrected variable name
+        alt={""} 
+        className="w-full h-auto rounded-lg shadow-lg object-cover"
+    />
+</div> 
 import React, { useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import Calendar from '../../components/Calendar/Calendar'; // Import Calendar component
