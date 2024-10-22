@@ -44,14 +44,14 @@ const ServicesPage = ({ activeService, heading, description, services, bgColor }
             </div>
 
             {/* Main Content */}
-            <div className="w-3/4 px-10 py-10 flex flex-col items-end mt-10">
+            <div className="w-3/4 px-10 py-10 flex flex-col items-end mt-28">
                 <div className="w-full text-center">
                     <h1 className="text-4xl font-bold mb-8">{heading}</h1>
                     <h2 className="text-xl font-semibold mb-12">{description}</h2>
 
                     <div className="grid grid-cols-2 gap-6 mt-28">
                         {services.map((service, index) => (
-                            <div key={index} className="border-b pb-4 mb-4">
+                            <div key={index} className="border-b border-dark border-dashed pb-4 mb-4">
                                 <h3 className="text-sm font-bold">{service.name}</h3>
                                 <p className="text-xs text-gray-500">{service.description}</p>
                                 <span className="block text-sm font-semibold text-gray-700">Rs {service.price}</span>

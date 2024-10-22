@@ -1,7 +1,7 @@
 import React from 'react';
 import img from '../../assets/our-story.png';
 
-const OurStory = () => {
+const OurStory = ({ isSubheading = false }) => {
     return (
         <>
             <section className="relative flex flex-col md:flex-row items-center justify-center bg-peach py-16 px-6 md:px-8 lg:px-12">
@@ -30,16 +30,20 @@ const OurStory = () => {
 
                 {/* Text Section */}
                 <div className="w-full md:w-1/2 text-center md:text-left px-4 sm:px-8 lg:px-12 z-10">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">Our Story</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4"style={{ fontFamily: 'Zeyada' }}>Our Story</h2>
                     <p className="text-gray-700 mb-6 text-sm sm:text-base lg:text-lg leading-relaxed">
                         We started as a small beauty studio in the US. Our main idea was to create the best beauty studio in the
                         world. Can there be compromises in the best studio in the world? Our answer is always no. We care about
                         the best quality, hire the best specialists, and provide the best customer service. This approach has
                         allowed us to grow and create an awesome team passionate about everything we do.
                     </p>
-                    <button className="px-6 py-3 border border-purplish text-purplish font-semibold rounded-lg hover:bg-purplish   hover:text-peach transition duration-300 ease-in-out">
-                        Learn More
-                    </button>
+                    {isSubheading ? (
+                        <h3 className="text-xl font-semibold text-purplish"style={{ fontFamily: 'Zeyada' }}>~ Aliza MakeUp Artist</h3>
+                    ) : (
+                        <button className="px-6 py-3 border border-purplish text-purplish font-semibold rounded-lg hover:bg-purplish hover:text-peach transition duration-300 ease-in-out">
+                            Learn More
+                        </button>
+                    )}
                 </div>
             </section>
         </>

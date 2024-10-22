@@ -43,7 +43,7 @@ const InstagramSection = () => {
 
       {/* Blur Box */}
       <div className="relative mx-auto max-w-5xl p-10  bg-white/30 backdrop-blur-lg rounded-lg shadow-lg">
-        <h2 className="text-center text-3xl font-semibold text-dark mb-6">INSTAGRAM</h2>
+        <h2 className="text-center text-3xl font-semibold text-dark mb-6" style={{ fontFamily: 'Zeyada' }}>INSTAGRAM</h2>
 
         {/* Image Grid */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
