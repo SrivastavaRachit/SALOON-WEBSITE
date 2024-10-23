@@ -17,10 +17,11 @@ const Contact = () => {
             <section className="min-h-screen pt-16 border-b border-black flex flex-col items-center">
                 <Banner
                     title="Contact Us"
-                    description="Get in touch with us for any inquiries or assistance. Our team is here to help you with all your needs and ensure a seamless experience."
+                    description="Get in touch with us for any inquiries or assistance. Our team is here to 
+                    help you with all your needs and ensure a seamless experience."
                     image={img}
                 />
-                <Contactme/>
+                <Contactme />
             </section>
             <Footer />
         </>

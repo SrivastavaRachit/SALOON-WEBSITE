@@ -57,10 +57,8 @@ const ContactPage = () => {
     const imgRef1 = React.useRef(null);
     const imgRef2 = React.useRef(null);
 
-
-
     return (
-        <div className="min-h-screen relative w-full items-center justify-center bg-blush p-8">
+        <div className="min-h-screen relative w-full items-center justify-center bg-blush p-4 md:p-8">
             {/* Contact Us Section */}
             <div className="flex flex-col lg:flex-row items-center">
                 {/* Left Image */}
@@ -69,12 +67,13 @@ const ContactPage = () => {
                         ref={imgRef1}
                         src={img}
                         alt="Product 1"
-                        className={`rounded-lg w-full h-full object-cover transition-transform duration-1000 ${scrollZoom ? 'scale-110' : ''} mb-8 lg:mb-0`}
+                        className={`rounded-lg w-full h-auto object-cover transition-transform duration-1000 
+                            ${scrollZoom ? 'scale-110' : ''} mb-8 lg:mb-0`}
                     />
                 </div>
                 {/* Right Contact Form */}
-                <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg ml-10 shadow-lg">
-                    <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
+                <div className="w-full lg:w-1/2 bg-white p-6 md:p-8 rounded-lg lg:ml-10 shadow-lg">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Contact Us</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
                             <label className="block text-gray-700">Name</label>
@@ -141,7 +140,8 @@ const ContactPage = () => {
 
                         <button
                             type="submit"
-                            className="w-full bg-peach text-black py-2 px-4 rounded-lg font-bold hover:bg-black hover:text-white transition duration-300"
+                            className="w-full bg-peach text-black py-2 px-4 rounded-lg font-bold
+                                hover:bg-black hover:text-white transition duration-300"
                         >
                             Send Message
                         </button>
@@ -159,25 +159,25 @@ const ContactPage = () => {
                         ref={imgRef2}
                         src={img2}
                         alt="Product 2"
-                        className="rounded-lg w-full h-full object-cover transition-transform duration-1000 scale-90"
+                        className="rounded-lg w-full h-auto object-cover transition-transform duration-1000 scale-90"
                     />
                 </div>
                 {/* Left Join Content */}
-                <div className="w-full lg:w-1/2 text-center bg-white p-8 rounded-lg shadow-lg">
+                <div className="w-full lg:w-1/2 text-center bg-white p-6 md:p-8 rounded-lg shadow-lg">
                     <div className="flex flex-col items-center">
                         <RiHeartsFill className="text-peach text-3xl mb-2" />
-                        <h3 className="text-2xl font-bold mb-4">Join Our Team</h3>
+                        <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4">Join Our Team</h3>
                     </div>
-                    <p className="text-lg mb-2">Please send us an email telling us a bit about yourself</p>
+                    <p className="text-md md:text-lg mb-2">Please send us an email telling us a bit about yourself</p>
                     <a
                         href="mailto:salon@gmail.com"
-                        className="bg-peach text-black py-2 px-4 inline-block rounded-lg font-bold hover:bg-black hover:text-white transition duration-300"
+                        className="bg-peach text-black py-2 px-4 inline-block rounded-lg font-bold hover:bg-black
+                                hover:text-white transition duration-300"
                     >
                         salon@gmail.com
                     </a>
                 </div>
             </div>
-
         </div>
     );
 };

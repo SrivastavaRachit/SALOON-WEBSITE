@@ -1,23 +1,15 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Banner from '../../components/Banner/Banner';
-import img from '../../assets/b1.jpg'; // Corrected import statement
-
-<div className="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/4">
-    <img 
-        src={img} // Corrected variable name
-        alt={""} 
-        className="w-full h-auto rounded-lg shadow-lg object-cover"
-    />
-</div> 
+import img from '../../assets/b1.jpg';
 import React, { useEffect, useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
-import Calendar from '../../components/Calendar/Calendar'; // Import Calendar component
+import Calendar from '../../components/Calendar/Calendar';
 
 const BookAppointment = () => {
     const [currentStep, setCurrentStep] = useState(1);
     const [isBooked, setIsBooked] = useState(false);
-    const [selectedDate, setSelectedDate] = useState(null); // Track the selected date
+    const [selectedDate, setSelectedDate] = useState(null);
     const [userInfo, setUserInfo] = useState({
         name: '',
         email: '',
@@ -26,14 +18,11 @@ const BookAppointment = () => {
     });
 
     const stepTitles = ['Service Selection', 'Date & Time', 'Your Information'];
-
-    // Admin WhatsApp number (replace with the actual admin number, including country code)
-    const adminWhatsAppNumber = '917651897865'; // Example number for India
+    const adminWhatsAppNumber = '917651897865';
 
     const handleContinue = () => {
         if (currentStep < 3) setCurrentStep(currentStep + 1);
         else {
-            // Ensure all fields are filled before booking
             const { name, phone, email } = userInfo;
             if (!name || !phone || !email || !selectedDate) {
                 alert("Please fill in all the required fields before proceeding.");
@@ -48,32 +37,20 @@ const BookAppointment = () => {
         if (currentStep > 1) setCurrentStep(currentStep - 1);
     };
 
-    // Send appointment details to admin's WhatsApp number
     const sendWhatsAppMessage = () => {
         const { name, phone, email, service } = userInfo;
-
-        // Service details object to include names and prices
         const serviceDetails = {
             hair: { name: 'Hair', price: 'Rs 1500' },
             makeup: { name: 'Makeup', price: 'Rs 3000' },
             pedicure: { name: 'Manicure & Pedicure', price: 'Rs 2000' },
         };
 
-        // Fetch selected service name and price
         const selectedService = serviceDetails[service];
-
-        // Format selected date for the message
         const formattedDate = selectedDate ? selectedDate.toDateString() : 'No date selected';
-
-        // WhatsApp message content with appointment details, ensuring proper line breaks (\n)
         const message = `*Appointment Details*:\n- *Name*: ${name}\n- *Phone*: ${phone}\n- *Email*: ${email}\n- *Service*: ${selectedService.name} - ${selectedService.price}\n- *Date*: ${formattedDate}`;
+        console.log("Selected Date:", formattedDate);
 
-        console.log("Selected Date:", formattedDate); // Log to check date
-
-        // WhatsApp API link to send the message to the admin
         const url = `https://wa.me/${adminWhatsAppNumber}?text=${encodeURIComponent(message)}`;
-
-        // Open WhatsApp chat with admin number
         window.open(url, '_blank');
     };
 
@@ -81,9 +58,8 @@ const BookAppointment = () => {
         setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
     };
 
-    // Callback function to handle date selection in the Calendar
     const handleDateSelect = (date) => {
-        setSelectedDate(date); // Update selected date
+        setSelectedDate(date);
     };
 
     useEffect(() => {
@@ -101,9 +77,9 @@ const BookAppointment = () => {
                 />
 
                 <div className="container flex justify-center mt-12">
-                    <div className="flex bg-white rounded-lg shadow-xl w-full max-w-6xl">
+                    <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-xl w-full max-w-6xl">
                         {/* Left Sidebar - Steps */}
-                        <div className="w-1/3 bg-pink-50 p-6 rounded-l-lg shadow-md">
+                        <div className="w-full md:w-1/3 bg-pink-50 p-6 rounded-t-lg md:rounded-l-lg shadow-md">
                             {stepTitles.map((title, index) => (
                                 <button
                                     key={index}
@@ -120,7 +96,7 @@ const BookAppointment = () => {
                         </div>
 
                         {/* Right Side - Content */}
-                        <div className="w-2/3 p-8 bg-white shadow-lg rounded-r-lg transition-all duration-300 ease-in-out hover:shadow-2xl">
+                        <div className="w-full md:w-2/3 p-8 bg-white shadow-lg rounded-b-lg md:rounded-r-lg transition-all duration-300 ease-in-out hover:shadow-2xl">
                             {!isBooked ? (
                                 <>
                                     {currentStep === 1 && (
@@ -140,7 +116,7 @@ const BookAppointment = () => {
                                     )}
 
                                     {currentStep === 2 && (
-                                        <Calendar onDateSelect={handleDateSelect} /> // Pass date select handler
+                                        <Calendar onDateSelect={handleDateSelect} />
                                     )}
 
                                     {currentStep === 3 && (
@@ -173,7 +149,7 @@ const BookAppointment = () => {
                                         </div>
                                     )}
 
-                                    <div className="border-t mt-28 pt-4">
+                                    <div className="border-t mt-10 pt-4">
                                         <div className="flex justify-between">
                                             <button
                                                 onClick={handleBack}

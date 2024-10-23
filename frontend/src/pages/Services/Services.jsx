@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Banner from '../../components/Banner/Banner';
 import img from '../../assets/b5.png';
-import Service from '../../components/Service/Service'; // Fixed import path
+import Service from '../../components/Service/Service';
 import ContactMe from '../../components/Contactme/Contactme'
 
 const servicesData = [
@@ -93,7 +93,10 @@ const Services = () => {
 
                 {/* Render the services multiple times with different data */}
                 {servicesData.map((service, index) => (
-                    <div key={index} className={`w-full ${index % 2 === 0 ? 'bg-white' : 'bg-peach'}`}>
+                    <div 
+                        key={index} 
+                        className={`w-full ${index % 2 === 0 ? 'bg-white' : 'bg-peach'} py-10`}
+                    >
                         <Service
                             activeService={service.category.toLowerCase()}
                             heading={<span style={{ fontFamily: 'Zeyada' }}>{service.heading}</span>}
@@ -101,9 +104,9 @@ const Services = () => {
                             services={service.services}
                             buttonBgColor={service.buttonBgColor}
                         />
-
                     </div>
                 ))}
+
                 <ContactMe />
             </section>
             <Footer />

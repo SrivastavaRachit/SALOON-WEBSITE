@@ -21,9 +21,9 @@ const ServicesPage = ({ activeService, heading, description, services, bgColor }
     ];
 
     return (
-        <div className={`${bgColor} min-h-screen flex w-full`}>
+        <div className={`${bgColor} min-h-screen flex flex-col md:flex-row w-full`}>
             {/* Sidebar with Lottie icons */}
-            <div className="w-1/4 bg-transparent flex flex-col items-center py-10 space-y-8">
+            <div className="w-full md:w-1/4 bg-transparent flex flex-row md:flex-col items-center justify-around md:justify-center py-10 space-x-4 md:space-x-0 md:space-y-8 overflow-x-auto md:overflow-visible">
                 {serviceCategories.map((category, index) => (
                     <div key={index} className="text-center flex flex-col items-center justify-center">
                         <div className="mb-2">
@@ -47,12 +47,12 @@ const ServicesPage = ({ activeService, heading, description, services, bgColor }
             </div>
 
             {/* Main Content */}
-            <div className="w-3/4 px-10 py-10 flex flex-col items-end mt-28">
+            <div className="w-full md:w-3/4 px-5 md:px-10 py-10 flex flex-col items-center md:items-end mt-10 md:mt-28">
                 <div className="w-full text-center">
-                    <h1 className="text-4xl font-bold mb-8">{heading}</h1>
-                    <h2 className="text-xl font-semibold mb-12">{description}</h2>
+                    <h1 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">{heading}</h1>
+                    <h2 className="text-base md:text-xl font-semibold mb-8 md:mb-12">{description}</h2>
 
-                    <div className="grid grid-cols-2 gap-6 mt-28">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 md:mt-28">
                         {services.map((service, index) => (
                             <div key={index} className="border-b border-dark border-dashed pb-4 mb-4">
                                 <h3 className="text-sm font-bold">{service.name}</h3>

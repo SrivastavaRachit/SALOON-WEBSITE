@@ -1,4 +1,3 @@
-// src/BlurCarousel.jsx
 import React, { useEffect, useRef } from "react";
 import "../Loop/Loop.css"; // Import custom styles
 
@@ -29,7 +28,7 @@ const BlurCarousel = () => {
 
     const smoothScroll = () => {
       scrollLeft += 0.5; // Control speed here
-      if (scrollLeft >= track.scrollWidth / 2) { 
+      if (scrollLeft >= track.scrollWidth / 2) {
         scrollLeft = 0; // Reset scroll to loop seamlessly
       }
       track.scrollLeft = scrollLeft;
@@ -41,17 +40,17 @@ const BlurCarousel = () => {
   }, []);
 
   return (
-    <div className="carousel-container relative overflow-hidden bg-coral">
+    <div className="carousel-container relative overflow-hidden bg-coral w-full max-w-full py-4">
       <div
         ref={trackRef}
-        className="carousel-track flex space-x-16 items-center"
+        className="carousel-track flex space-x-8 sm:space-x-10 md:space-x-16 items-center w-full"
       >
         {logos.concat(logos).map((logo, index) => (
           <img
             key={index}
             src={logo}
             alt={`Logo ${index}`}
-            className="carousel-item h-16 transition-opacity duration-300 ease-in-out"
+            className="carousel-item h-10 sm:h-12 md:h-16 transition-opacity duration-300 ease-in-out"
           />
         ))}
       </div>

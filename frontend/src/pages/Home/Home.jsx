@@ -18,16 +18,16 @@ const Home = () => {
 
     return (
         <>
-            <div>
-                <Navbar/>
-                <Hero />
-                <ServiceHero />
-                <OurStory />
-                <AsSeen/>
-                <FollowUs/>
-                <Instagram/>
-                <ContactTime />
-                <Footer/>
+            <div className="overflow-x-hidden">
+                <Navbar />
+                    <Hero />
+                    <ServiceHero />
+                    <OurStory />
+                    <AsSeen />
+                    <FollowUs />
+                    <Instagram />
+                    <ContactTime />
+                <Footer />
             </div>
         </>
     )
