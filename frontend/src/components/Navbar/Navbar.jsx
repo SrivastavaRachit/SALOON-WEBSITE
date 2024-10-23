@@ -89,7 +89,7 @@ const Navbar = () => {
 
             {/* Mobile Navigation */}
             {isOpen && (
-                <ul className={`absolute top-full left-0 w-full ${isHomePage ? 'bg-white' : 'bg-peach'} shadow-md py-4 flex flex-col items-center space-y-4 text-sm font-medium md:hidden ${isHomePage ? 'text-white' : 'text-black'}`}>
+                <ul className={`absolute top-full left-0 w-full ${isHomePage ? 'bg-peach' : 'bg-peach'} shadow-md py-4 flex flex-col items-center space-y-4 text-sm font-medium md:hidden ${isHomePage ? 'text-white' : 'text-black'}`}>
                     <li className={`${isHomePage ? 'hover:text-coral' : 'hover:text-dark'}`}>
                         <NavLink
                             to="/"
