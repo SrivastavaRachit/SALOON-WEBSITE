@@ -20,7 +20,7 @@ const AsSeen = () => {
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-4 py-8">
                 <Loop/>
-                <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-white mb-4">As Seen On</h2>
+                <h2 className="text-lg sm:text-xl md:text-3xl mt-10 font-bold text-white">As Seen On</h2>
                 <p className="text-lg sm:text-xl lg:text-2xl font-medium text-white italic mb-6">
                     "The place with its constant excellence, soul, and style"
                 </p>
