@@ -12,19 +12,19 @@ import OurStory from '../../components/Our StoryPart1/OurStoryP1'
 const OurStoryPage = () => {
     return (
         <>
-           <Navbar className="text-black border-black" />
+            <Navbar className="text-black border-black" />
             <section className="min-h-screen pt-16 border-b border-black flex flex-col items-center">
                 <Banner
                     title="Our Story"
-description = "Explore our exceptional salon services, meticulously crafted to enhance your natural beauty and provide a rejuvenating experience. From hair styling to skincare, our expert team is dedicated to delivering personalized care that leaves you feeling refreshed and confident."                    image={img}
+                    description="Explore our exceptional salon services, meticulously crafted to enhance your natural beauty and provide a rejuvenating experience. From hair styling to skincare, our expert team is dedicated to delivering personalized care that leaves you feeling refreshed and confident." image={img}
                 />
-                <OurStory/>
-               <OurStory1 isSubheading={true} style={{ fontFamily: 'Zeyada' }}/>
-               <OurStory3/>
-               <Contact/>
-  
+                <OurStory />
+                <OurStory1 isSubheading={true} style={{ fontFamily: 'Zeyada' }} />
+                <OurStory3 />
+                <Contact />
+
             </section>
-            <Footer/>
+            <Footer />
         </>
     )
 }
