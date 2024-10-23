@@ -5,13 +5,10 @@ import FooterImg from '../../assets/footercurve.png'
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
-
     return (
         <>
             <footer className="bg-peach pt-10">
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
-
-                    {/* Left side - Salon Logo and Tagline */}
                     <div className="flex flex-col items-center md:items-start">
                         <div className="relative flex items-center justify-center">
                             <div className="w-48 h-48 flex items-center justify-center">
@@ -38,19 +35,28 @@ const Footer = () => {
                             for the latest news
                         </p>
                         <div className="flex justify-center md:justify-end space-x-6 mt-4">
-                            <FaFacebookF className="text-2xl text-gray-600 hover:text-dark transition duration-300 cursor-pointer" />
-                            <FaInstagram className="text-2xl text-gray-600 hover:text-dark transition duration-300 cursor-pointer" />
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                <FaFacebookF className="text-2xl text-gray-600 hover:text-blue-400 transition 
+                                duration-300 cursor-pointer" />
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                <FaInstagram className="text-2xl text-gray-600 hover:text-red-500 transition 
+                                duration-300 cursor-pointer" />
+                            </a>
                         </div>
                     </div>
                 </div>
                 <hr />
                 {/* Footer Bottom Text */}
-                <div className=" pt-10 bg-dark text-center text-white text-sm">
-                    2024 Salon All rights reserved.
+                <div className="pt-10 bg-dark text-center text-white text-sm">
+                    2024 MakeUp Saloon
+                    <br />
+                    All rights reserved.
+                    <br />
+                    <span className="text-yellow-400">By Hexagon Digital Services</span>
                 </div>
             </footer>
         </>
-
     );
 };
 

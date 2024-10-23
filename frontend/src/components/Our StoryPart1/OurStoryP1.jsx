@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaLeaf } from 'react-icons/fa';
 import { GiRabbit, GiNailedHead } from 'react-icons/gi';
 import { AiOutlineUser } from 'react-icons/ai';
@@ -8,42 +9,42 @@ import { MdOutlineSanitizer } from 'react-icons/md';
 
 const Philosophy = () => {
   const data = [
- {
-  icon: <FaLeaf className="text-3xl text-coral" />,
-  title: 'Beauty Cosmetic',
-  description:
-    'All cosmetic formulas are organic. The majority of all ingredients is natural.',
-},
-{
-  icon: <GiRabbit className="text-3xl text-coral" />,
-  title: 'Cruelty-Free',
-  description:
-    'Even nowadays some cosmetic products are tested on animals. That is not the case for us.',
-},
-{
-  icon: <MdOutlineSanitizer className="text-3xl text-coral" />,
-  title: 'Professional Products',
-  description:
-    'All products we use are professional and have proven efficiency. No compromises.',
-},
-{
-  icon: <GiNailedHead className="text-3xl text-coral" />,
-  title: 'Non-Toxic Formula',
-  description:
-    'Don’t worry, all our nail polishes and other products are non-toxic. We do care about you and our specialists.',
-},
-{
-  icon: <AiOutlineUser className="text-3xl text-coral" />,
-  title: 'Personalized Experience',
-  description:
-    'Each guest is our favorite guest. Come and make sure that our services are exceptional.',
-},
-{
-  icon: <BsHeart className="text-3xl text-coral" />,
-  title: 'We Love What We Do',
-  description:
-    'People that you’ll meet in our studio are doing the job they love. Come and make sure there is a difference.',
-},
+    {
+      icon: <FaLeaf className="text-3xl text-coral" />,
+      title: 'Beauty Cosmetic',
+      description:
+        'All cosmetic formulas are organic. The majority of all ingredients is natural.',
+    },
+    {
+      icon: <GiRabbit className="text-3xl text-coral" />,
+      title: 'Cruelty-Free',
+      description:
+        'Even nowadays some cosmetic products are tested on animals. That is not the case for us.',
+    },
+    {
+      icon: <MdOutlineSanitizer className="text-3xl text-coral" />,
+      title: 'Professional Products',
+      description:
+        'All products we use are professional and have proven efficiency. No compromises.',
+    },
+    {
+      icon: <GiNailedHead className="text-3xl text-coral" />,
+      title: 'Non-Toxic Formula',
+      description:
+        'Don’t worry, all our nail polishes and other products are non-toxic. We do care about you and our specialists.',
+    },
+    {
+      icon: <AiOutlineUser className="text-3xl text-coral" />,
+      title: 'Personalized Experience',
+      description:
+        'Each guest is our favorite guest. Come and make sure that our services are exceptional.',
+    },
+    {
+      icon: <BsHeart className="text-3xl text-coral" />,
+      title: 'We Love What We Do',
+      description:
+        'People that you’ll meet in our studio are doing the job they love. Come and make sure there is a difference.',
+    },
   ];
 
   return (
@@ -60,10 +61,12 @@ const Philosophy = () => {
           ))}
         </div>
         <button className="bg-peach text-black font-bold px-4 py-2 rounded-lg hover:bg-coral transition duration-300 mt-8">
+          <Link to='/book'>
           Book an Appointment
+          </Link>
         </button>
       </div>
-      
+
     </section>
   );
 };
