@@ -10,7 +10,7 @@ import img from '../../assets/b1.jpg'; // Corrected import statement
         className="w-full h-auto rounded-lg shadow-lg object-cover"
     />
 </div> 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import Calendar from '../../components/Calendar/Calendar'; // Import Calendar component
 
@@ -85,6 +85,10 @@ const BookAppointment = () => {
     const handleDateSelect = (date) => {
         setSelectedDate(date); // Update selected date
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>

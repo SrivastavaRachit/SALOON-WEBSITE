@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import Banner from '../../components/Banner/Banner'
@@ -10,6 +10,11 @@ import Contact from '../../components/ContactTime/ContactTime'
 import OurStory from '../../components/Our StoryPart1/OurStoryP1'
 
 const OurStoryPage = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <Navbar className="text-black border-black" />

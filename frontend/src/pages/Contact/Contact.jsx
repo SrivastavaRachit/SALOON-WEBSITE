@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import Banner from '../../components/Banner/Banner'
@@ -6,6 +6,11 @@ import img from '../../assets/bginsta.jpg'
 import Contactme from '../../components/Contactme/Contactme'
 
 const Contact = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <Navbar className="text-black border-black" />
