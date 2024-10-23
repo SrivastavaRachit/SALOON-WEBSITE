@@ -1,0 +1,49 @@
+/* src/carousel.css */
+.carousel-container {
+    width: 100%; /* Full width */
+    height: 100px; /* Adjust height as needed */
+    background-color: #F7AB91; /* Peach background color */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-track {
+    display: flex;
+    white-space: nowrap; /* Keep items in one line */
+    overflow-x: hidden;
+  }
+  
+  .carousel-item {
+    flex-shrink: 0; /* Prevent items from shrinking */
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+  }
+  
+ .carousel-item {
+    opacity: 1; /* Fully visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .gradient-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40%; /* Control width of the gradient mask */
+    pointer-events: none; /* Allow interaction through the mask */
+    z-index: 10;
+  }
+  
+  .gradient-mask.left-0 {
+    left: 0;
+    background: linear-gradient(to right, #F7AB91, transparent);
+  }
+  
+  .gradient-mask.right-0 {
+    right: 0;
+    background: linear-gradient(to left, #F7AB91, transparent);
+  }
+  

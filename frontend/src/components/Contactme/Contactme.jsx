@@ -58,26 +58,7 @@ const ContactPage = () => {
     const imgRef1 = React.useRef(null);
     const imgRef2 = React.useRef(null);
 
-    useEffect(() => {
-        const imagesRef = [imgRef1.current, imgRef2.current];
-        imagesRef.forEach((img) => {
-            img.addEventListener('mousemove', (e) => {
-                const { offsetX, offsetY, target } = e;
-                const { offsetWidth, offsetHeight } = target;
-                const moveX = (offsetX / offsetWidth) * 10 - 5;
-                const moveY = (offsetY / offsetHeight) * 10 - 5;
-                gsap.to(target, {
-                    x: moveX,
-                    y: moveY,
-                    duration: 0.3,
-                });
-            });
-
-            img.addEventListener('mouseleave', (e) => {
-                gsap.to(e.target, { x: 0, y: 0, duration: 0.3 });
-            });
-        });
-    }, []);
+   
 
     return (
         <div className="min-h-screen relative w-full items-center justify-center bg-blush p-8">

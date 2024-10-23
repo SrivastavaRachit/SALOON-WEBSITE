@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Ensure Link is imported from react-router-dom
 import Lottie from 'lottie-react';
 import animationData from '../../assets/cut (1).json';
 import animationData2 from '../../assets/Individual.json';
@@ -31,7 +32,7 @@ const ServiceHero = () => {
                     </p>
 
                     <button className="bg-coral hover:bg-peach text-black font-bold py-2 px-4 lg:px-6 rounded-lg text-sm sm:text-base lg:text-lg">
-                        View Service Menu
+                        <Link to='/service'> View Service Menu </Link>
                     </button>
                 </div>
             </div>
