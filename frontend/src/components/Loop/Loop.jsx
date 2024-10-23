@@ -2,13 +2,21 @@
 import React, { useEffect, useRef } from "react";
 import "../Loop/Loop.css"; // Import custom styles
 
+// Import logos from assets
+import windowsLogo from "../../assets/l1.png";
+import mitLogo from "../../assets/l2.png";
+import robinhoodLogo from "../../assets/l3.png";
+import sapLogo from "../../assets/l4.png";
+import krogerLogo from "../../assets/l5.png";
+import mediumLogo from "../../assets/l6.png";
+
 const logos = [
-  "https://upload.wikimedia.org/wikipedia/commons/6/6a/Windows_logo_-_2021.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/b/b9/Robinhood_Logo.png",
-  "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/5/51/Kroger_logo_%282019%29.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/4/45/Medium_logo_M.png",
+  windowsLogo,
+  mitLogo,
+  robinhoodLogo,
+  sapLogo,
+  krogerLogo,
+  mediumLogo,
 ];
 
 const BlurCarousel = () => {
