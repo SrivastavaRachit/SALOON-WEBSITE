@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import animationData from '../../assets/cut (1).json';
 import animationData2 from '../../assets/Individual.json';
@@ -8,6 +9,8 @@ import animationData5 from '../../assets/Eye.json';
 import animationData6 from '../../assets/Community.json';
 
 const ServicesPage = ({ activeService, heading, description, services, bgColor }) => {
+    const navigate = useNavigate();
+
     const serviceCategories = [
         { name: 'Hair', animation: animationData },
         { name: 'Makeup', animation: animationData4 },
@@ -63,8 +66,9 @@ const ServicesPage = ({ activeService, heading, description, services, bgColor }
                 {/* Book Appointment Button */}
                 <div className="w-full flex justify-center mt-10">
                     <button
-                        className="py-3 px-6 rounded-md font-bold bg-peach text-black border border-black transition duration-300 hover:bg-black hover:text-white"
-                        onClick={() => alert('Appointment booked successfully!')}
+                        className="py-3 px-6 rounded-md font-bold bg-peach text-black border border-black 
+                        transition duration-300 hover:bg-black hover:text-white"
+                        onClick={() => navigate('/book')}
                     >
                         Book an Appointment
                     </button>
