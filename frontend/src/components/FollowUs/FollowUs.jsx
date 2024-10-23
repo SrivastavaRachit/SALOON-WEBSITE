@@ -21,8 +21,8 @@ const FollowUs = () => {
                     <div className="hidden md:block w-1 h-48 bg-gradient-to-b from-coral to-coral mx-8"></div>
 
                     {/* Right side - Follow Us */}
-                    <div className="flex flex-col items-center md:items-start space-y-4">
-                        <h3 className="text-xl md:text-2xl font-bold text-gray-800">Follow Us</h3>
+                    <div className="flex flex-col items-center md:items-start mr-28 space-y-4">
+<h1 className="text-3xl md:text-4xl font-zeyada font-bold text-gray-800"style={{ fontFamily: 'Zeyada' }}>Follow Us</h1>
                         <p className="text-sm md:text-base text-gray-600">Don't miss promotions, follow us for the latest
                             news</p>
                         <p className="text-sm md:text-base text-gray-600">Don't miss promotions,
