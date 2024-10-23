@@ -11,9 +11,9 @@ const FollowUs = () => {
                 <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 lg:px-12">
                     {/* Left side - Circular logo */}
                     <div className="flex flex-col items-center md:items-start space-y-4">
-                        <div className="w-40 h-40 md:w-48 md:h-48 flex items-center justify-center rounded-full border-4 border-coral relative">
+                        <div className="w-40 h-40 md:w-48 md:h-48 flex items-center justify-center rounded-full border-4 border-purplish relative">
                             <span className="absolute inset-0 border-2 border-coral rounded-full"></span>
-                            <h3 className="text-2xl md:text-3xl text-gray-800 z-10">S A L O N</h3>
+                            <h3 className="text-2xl text-bold md:text-3xl text-gray-800 z-10"style={{ fontFamily: 'Zeyada' }}>S A L O N</h3>
                         </div>
                     </div>
 
@@ -21,9 +21,8 @@ const FollowUs = () => {
                     <div className="hidden md:block w-1 h-48 bg-gradient-to-b from-coral to-coral mx-8"></div>
 
                     {/* Right side - Follow Us */}
-                    <div className="flex flex-col items-center md:items-start space-y-4">
-                        <h3 className="text-xl md:text-2xl font-bold text-gray-800">Follow Us</h3>
-                        <p className="text-sm md:text-base text-gray-600">Don't miss promotions, follow us for the latest news</p>
+                    <div className="flex flex-col items-center mr-28 md:items-start space-y-4">
+<h1 className="text-10xl md:text-3xl font-bold text-gray-800" style={{ fontFamily: 'Zeyada' }}>Follow Us</h1>                        <p className="text-sm md:text-base text-gray-600">Don't miss promotions, follow us for the latest news</p>
 
                         {/* Social Media Links */}
                         <div className="flex space-x-6 text-2xl text-gray-800">
