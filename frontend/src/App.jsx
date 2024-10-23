@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 // PAGES
 import Home from './pages/Home/Home';
@@ -11,10 +11,8 @@ import OurStoryPage from './pages/OurStoryPage/OurStoryPage';
 
 
 // COMPONENTS
-
 const App = () => {
   return (
-
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/contact" element={<Contact />} />
@@ -23,7 +21,6 @@ const App = () => {
       <Route path='/service' element={<Services />} />
       <Route path='/our-story' element={<OurStoryPage />} />
     </Routes>
-
   );
 };
 
