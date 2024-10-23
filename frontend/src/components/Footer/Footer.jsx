@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import img from '../../assets/Hexagon logo.png';
 
 import FooterImg from '../../assets/footercurve.png'
 import { NavLink } from "react-router-dom";
@@ -13,7 +14,8 @@ const Footer = () => {
                         <div className="relative flex items-center justify-center">
                             <div className="w-48 h-48 flex items-center justify-center">
                                 <NavLink to='/'>
-                                    <img src={FooterImg} alt="" />
+                                <h3 className="text-2xl text-bold md:text-3xl text-gray-800 font-bold z-10" style={{ fontFamily: 'Zeyada' }}>S A L O N</h3>
+
                                 </NavLink>
                             </div>
                         </div>
@@ -48,12 +50,25 @@ const Footer = () => {
                 </div>
                 <hr />
                 {/* Footer Bottom Text */}
-                <div className="pt-10 bg-dark text-center text-white text-sm">
-                    2024 MakeUp Saloon
+                <div className="py-5 bg-black text-center text-gray-300 text-sm">
+                     MakeUp Saloon | 2024 All rights reserved
                     <br />
-                    All rights reserved.
-                    <br />
-                    <span className="text-yellow-400">By Hexagon Digital Services</span>
+                    <p className="text-gray-300 text-sm mt-2 flex items-center justify-center">
+          <img
+            src={img} // Update the path if needed
+            alt="Hexagon Digital Services Logo"
+            className="h-6 mr-2"
+          />
+          Powered by{" "}
+          <a
+            href="https://hexagondigitalservices.com"
+            className="text-white underline hover:text-purple-300 transition-colors ml-1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hexagon Digital Services
+          </a>
+        </p>
                 </div>
             </footer>
         </>
