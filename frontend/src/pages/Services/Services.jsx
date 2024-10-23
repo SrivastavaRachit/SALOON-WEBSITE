@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import Banner from '../../components/Banner/Banner';
 import img from '../../assets/b5.png';
 import Service from '../../components/Service/Service'; // Fixed import path
+import ContactMe from '../../components/Contactme/Contactme'
 
 const servicesData = [
    {
@@ -86,17 +87,19 @@ const Services = () => {
                 />
 
                 {/* Render the services multiple times with different data */}
-                {servicesData.map((service, index) => (
-                    <div key={index} className={`w-full ${index % 2 === 0 ? 'bg-white' : 'bg-peach'}`}>
-                        <Service
-                            activeService={service.category.toLowerCase()}
-                            heading={<span style={{ fontFamily: 'Zeyada' }}>{service.heading}</span>}
-                            description={service.description}
-                            services={service.services}
-                            buttonBgColor={service.buttonBgColor}
-                        />
-                    </div>
-                ))}
+               {servicesData.map((service, index) => (
+    <div key={index} className={`w-full ${index % 2 === 0 ? 'bg-white' : 'bg-peach'}`}>
+        <Service
+            activeService={service.category.toLowerCase()}
+            heading={<span style={{ fontFamily: 'Zeyada' }}>{service.heading}</span>}
+            description={service.description}
+            services={service.services}
+            buttonBgColor={service.buttonBgColor}
+        />
+       
+    </div>
+))}
+                <ContactMe/>
             </section>
             <Footer />
         </>
