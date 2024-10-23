@@ -13,7 +13,7 @@ const FollowUs = () => {
                     <div className="flex flex-col items-center md:items-start space-y-4">
                         <div className="w-40 h-40 md:w-48 md:h-48 flex items-center justify-center rounded-full border-4 border-purplish relative">
                             <span className="absolute inset-0 border-2 border-coral rounded-full"></span>
-                            <h3 className="text-2xl text-bold md:text-3xl text-gray-800 z-10" style={{ fontFamily: 'Zeyada' }}>S A L O N</h3>
+                            <h3 className="text-2xl font-bold md:text-3xl text-gray-800 z-10" style={{ fontFamily: 'Zeyada' }}>S A L O N</h3>
                         </div>
                     </div>
 

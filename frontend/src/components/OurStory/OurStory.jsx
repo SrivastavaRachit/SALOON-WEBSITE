@@ -1,5 +1,6 @@
 import React from 'react';
 import img from '../../assets/our-story.png';
+import { Link } from 'react-router-dom';
 
 const OurStory = ({ isSubheading = false }) => {
     return (
@@ -41,7 +42,9 @@ const OurStory = ({ isSubheading = false }) => {
                         <h3 className="text-xl font-semibold text-purplish"style={{ fontFamily: 'Zeyada' }}>~ Aliza MakeUp Artist</h3>
                     ) : (
                         <button className="px-6 py-3 border border-purplish text-purplish font-semibold rounded-lg hover:bg-purplish hover:text-peach transition duration-300 ease-in-out">
+                            <Link to='/our-story'>
                             Learn More
+                            </Link>
                         </button>
                     )}
                 </div>

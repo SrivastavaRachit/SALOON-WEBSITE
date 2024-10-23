@@ -14,7 +14,7 @@ const Footer = () => {
                         <div className="relative flex items-center justify-center">
                             <div className="w-48 h-48 flex items-center justify-center">
                                 <NavLink to='/'>
-                                <h3 className="text-2xl text-bold md:text-3xl text-gray-800 font-bold z-10" style={{ fontFamily: 'Zeyada' }}>S A L O N</h3>
+                                    <h3 className="text-2xl text-bold md:text-3xl text-gray-800 font-bold z-10" style={{ fontFamily: 'Zeyada' }}>S A L O N</h3>
 
                                 </NavLink>
                             </div>
@@ -24,7 +24,7 @@ const Footer = () => {
                     {/* Center - Navigation Links */}
                     <div className="mt-10 md:mt-0 flex flex-col text-center space-y-3 text-gray-800 md:text-left">
                         <NavLink to='/' className="font-semibold hover:text-dark cursor-pointer">Home</NavLink>
-                        <NavLink to='/about' className="font-semibold hover:text-dark cursor-pointer">About Us</NavLink>
+                        <NavLink to='/book' className="font-semibold hover:text-dark cursor-pointer">Book Online</NavLink>
                         <NavLink to='/service' className="font-semibold hover:text-dark cursor-pointer">Service Menu</NavLink>
                         <NavLink to='/our-story' className="font-semibold hover:text-dark cursor-pointer">Our Story</NavLink>
                     </div>
@@ -51,24 +51,24 @@ const Footer = () => {
                 <hr />
                 {/* Footer Bottom Text */}
                 <div className="py-5 bg-black text-center text-gray-300 text-sm">
-                     MakeUp Saloon | 2024 All rights reserved
+                    MakeUp Saloon | 2024 All rights reserved
                     <br />
                     <p className="text-gray-300 text-sm mt-2 flex items-center justify-center">
-          <img
-            src={img} // Update the path if needed
-            alt="Hexagon Digital Services Logo"
-            className="h-6 mr-2"
-          />
-          Powered by{" "}
-          <a
-            href="https://hexagondigitalservices.com"
-            className="text-white underline hover:text-purple-300 transition-colors ml-1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Hexagon Digital Services
-          </a>
-        </p>
+                        <img
+                            src={img} // Update the path if needed
+                            alt="Hexagon Digital Services Logo"
+                            className="h-6 mr-2"
+                        />
+                        Powered by{" "}
+                        <a
+                            href="https://hexagondigitalservices.com"
+                            className="text-white underline hover:text-purple-300 transition-colors ml-1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Hexagon Digital Services
+                        </a>
+                    </p>
                 </div>
             </footer>
         </>

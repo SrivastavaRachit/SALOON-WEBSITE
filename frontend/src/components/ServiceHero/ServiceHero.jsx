@@ -14,7 +14,9 @@ const ServiceHero = () => {
             <div className="flex items-center justify-center pt-8 bg-white px-4 sm:px-6 lg:px-8">
                 <div className="text-center w-full max-w-screen-2xl mx-auto p-6 sm:p-8 lg:p-12 rounded-lg">
                     <h2 className="text-xl sm:text-2xl pb-10 lg:text-5xl font-bold text-brown-900 mb-4 lg:mb-6 font-sans " style={{ fontFamily: 'Zeyada' }}>
+                        <Link to='/services'>
                         Service Menu
+                        </Link>
                     </h2>
 
                     {/* Icon Grid */}
