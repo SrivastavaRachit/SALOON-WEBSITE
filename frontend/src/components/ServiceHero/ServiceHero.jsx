@@ -31,8 +31,9 @@ const ServiceHero = () => {
                         Get your nails done for a great mood. Simple pleasures can make your week, not just your day.
                     </p>
 
-                    <button className="bg-coral hover:bg-peach text-black font-bold py-2 px-4 lg:px-6 rounded-lg text-sm sm:text-base lg:text-lg">
-                        <Link to='/service'> View Service Menu </Link>
+                    <button className="bg-coral hover:bg-peach text-black font-bold py-2 px-4 lg:px-6 rounded-lg
+                            text-sm sm:text-base lg:text-lg">
+                        <Link to='/service'>View Service Menu</Link>
                     </button>
                 </div>
             </div>

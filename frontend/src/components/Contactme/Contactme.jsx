@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { RiHeartsFill } from "react-icons/ri";
 import img from '../../assets/i1.jpg';
 import img2 from '../../assets/i5.jpg';
-import gsap from 'gsap';
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({
@@ -58,7 +57,7 @@ const ContactPage = () => {
     const imgRef1 = React.useRef(null);
     const imgRef2 = React.useRef(null);
 
-   
+
 
     return (
         <div className="min-h-screen relative w-full items-center justify-center bg-blush p-8">
@@ -170,11 +169,15 @@ const ContactPage = () => {
                         <h3 className="text-2xl font-bold mb-4">Join Our Team</h3>
                     </div>
                     <p className="text-lg mb-2">Please send us an email telling us a bit about yourself</p>
-                    <button type="submit" className=" bg-peach text-black py-2 px-4  inline-block rounded-lg font-bold hover:bg-black hover:text-white transition duration-300">
+                    <a
+                        href="mailto:salon@gmail.com"
+                        className="bg-peach text-black py-2 px-4 inline-block rounded-lg font-bold hover:bg-black hover:text-white transition duration-300"
+                    >
                         salon@gmail.com
-                    </button>
+                    </a>
                 </div>
             </div>
+
         </div>
     );
 };

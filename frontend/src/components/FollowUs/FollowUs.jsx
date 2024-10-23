@@ -23,7 +23,8 @@ const FollowUs = () => {
                     {/* Right side - Follow Us */}
                     <div className="flex flex-col items-center md:items-start space-y-4">
                         <h3 className="text-xl md:text-2xl font-bold text-gray-800">Follow Us</h3>
-                        <p className="text-sm md:text-base text-gray-600">Don't miss promotions, follow us for the latest news</p>
+                        <p className="text-sm md:text-base text-gray-600">Don't miss promotions, follow us for the latest 
+                        news</p>
 
                         {/* Social Media Links */}
                         <div className="flex space-x-6 text-2xl text-gray-800">
