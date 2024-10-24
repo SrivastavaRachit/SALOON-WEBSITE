@@ -10,7 +10,6 @@ const Footer = () => {
         window.scrollTo(0, 0);
     }, []);
 
-
     return (
         <>
             <footer className="bg-peach pt-10">
@@ -18,7 +17,7 @@ const Footer = () => {
                     {/* Logo and Brand Name */}
                     <div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
                         <div className="relative flex items-center justify-center">
-                            <div className="w-48 h-48 flex items-center justify-center">
+                            <div className="w-32 h-32 flex items-center justify-center md:w-48 md:h-48">
                                 <NavLink to='/'>
                                     <h3 className="text-3xl md:text-4xl text-gray-800 font-bold z-10" style={{ fontFamily: 'Zeyada' }}>
                                         S A L O N
@@ -29,16 +28,15 @@ const Footer = () => {
                     </div>
 
                     {/* Center - Navigation Links */}
-                    <div className="flex flex-col text-center md:text-left space-y-3 mb-6 md:mb-0">
-                        <NavLink to='/' className="font-semibold text-gray-800 hover:text-dark transition duration-300"  onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
+                    <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-3 mb-6 md:mb-0">
+                        <NavLink to='/' className="font-semibold text-gray-800 hover:text-dark transition duration-300" onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
                         <NavLink to='/book' className="font-semibold text-gray-800 hover:text-dark transition duration-300">Book Online</NavLink>
                         <NavLink to='/service' className="font-semibold text-gray-800 hover:text-dark transition duration-300">Service Menu</NavLink>
                         <NavLink to='/our-story' className="font-semibold text-gray-800 hover:text-dark transition duration-300">Our Story</NavLink>
                     </div>
 
-
                     {/* Right side - Contact Us */}
-                    <div className="text-center mr-10 justify-center md:text-right">
+                    <div className="text-center md:text-right">
                         <NavLink to='/contact' className="font-bold text-lg text-black">Contact Us</NavLink>
                         <p className="text-gray-500 mt-2">
                             Don’t miss promotions, follow us <br />
@@ -55,22 +53,22 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <hr className="my-4 border-gray-300" />
+                <hr className="my-4 border-black" />
 
                 {/* Footer Bottom Text */}
-                <div className="py-5 bg-black text-center text-gray-300 text-sm">
+                <div className="py-5 bg-peach text-center text-black text-sm">
                     MakeUp Saloon | 2024 All rights reserved
                     <br />
                     <p className="mt-2 flex flex-col md:flex-row items-center justify-center">
                         <img
-                            src={img} // Update the path if needed
+                            src={img}
                             alt="Hexagon Digital Services Logo"
-                            className="h-6 mr-2"
+                            className="h-6 mb-2 md:mb-0 md:mr-2"
                         />
                         Powered by{" "}
                         <a
                             href="https://hexagondigitalservices.com"
-                            className="text-white underline hover:text-purple-300 transition-colors ml-1"
+                            className="text-purplish underline hover:text-purple-300 transition-colors ml-1"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

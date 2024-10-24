@@ -87,9 +87,15 @@ const InstagramSection = () => {
 
         {/* Follow Button */}
         <div className="text-center mt-8">
-          <button className="border-2 border-dark font-bold text-dark px-8 py-3 rounded-lg hover:bg-coral hover:text-black transition duration-300">
-            FOLLOW US on Instagram @salon_insta
-          </button>
+        <a 
+            href="https://www.instagram.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <button className="border-2 border-dark font-bold text-dark px-8 py-3 rounded-lg hover:bg-coral hover:text-black transition duration-300">
+              FOLLOW US on Instagram @salon_insta
+            </button>
+          </a>
         </div>
       </div>
     </div>
