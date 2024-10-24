@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { SlSocialFacebook,  SlSocialInstagram } from "react-icons/sl";
 import img from '../../assets/Hexagon logo.png';
 import { NavLink } from "react-router-dom";
 
@@ -30,18 +30,18 @@ const Footer = () => {
                     </div>
 
                     {/* Right side - Contact Us */}
-                    <div className="text-center md:text-right">
-                        <NavLink to='/contact' className="font-bold text-lg text-gray-800">Contact Us</NavLink>
-                        <p className="text-gray-600 mt-2">
+               <div className="text-center mr-10 justify-center md:text-right">
+                        <NavLink to='/contact' className="font-bold text-lg text-black">Contact Us</NavLink>
+                        <p className="text-gray-500 mt-2">
                             Don’t miss promotions, follow us <br />
                             for the latest news
                         </p>
                         <div className="flex justify-center md:justify-end space-x-6 mt-4">
                             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                                <FaFacebookF className="text-2xl text-gray-600 hover:text-blue-400 transition duration-300 cursor-pointer" />
+                                <SlSocialFacebook className="text-2xl text-black hover:text-blue-400 transition duration-300 cursor-pointer" />
                             </a>
                             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                                <FaInstagram className="text-2xl text-gray-600 hover:text-red-500 transition duration-300 cursor-pointer" />
+                                <SlSocialInstagram className="text-2xl text-black hover:text-red-500 transition duration-300 cursor-pointer" />
                             </a>
                         </div>
                     </div>

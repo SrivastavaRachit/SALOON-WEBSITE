@@ -7,7 +7,7 @@ const Banner = ({ title, description, image }) => {
             {/* Title and Description */}
             <div className="flex flex-col w-full md:w-1/2 px-10 py-10 text-left">
                 <h1 className="text-3xl md:text-5xl mb-10 font-bold text-gray-900">{title}</h1>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">{description}</p>
+                <p className="text-lg md:text-xl text-gray-500 leading-relaxed">{description}</p>
             </div>
 
             {/* Image */}

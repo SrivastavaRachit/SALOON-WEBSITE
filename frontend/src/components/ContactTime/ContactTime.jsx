@@ -26,8 +26,8 @@ const ContactTime = () => {
             />
           </div>
           <h3 className="text-lg font-bold tracking-wider text-black">CONTACT</h3>
-          <p className="text-gray-700 mt-2">T: 070 9485 7568</p>
-          <p className="text-gray-700">info@beautysalon.com</p>
+          <p className="text-gray-500 mt-2">T: 070 9485 7568</p>
+          <p className="text-gray-500">info@beautysalon.com</p>
         </div>
 
         {/* Dotted Line */}
@@ -42,9 +42,9 @@ const ContactTime = () => {
             />
           </div>
           <h3 className="text-lg font-bold tracking-wider text-black">HOURS</h3>
-          <p className="text-gray-700 mt-2">Mon to Fri: 7:30 am – 1:00 am</p>
-          <p className="text-gray-700">Sat: 9:00 am – 1:00 am</p>
-          <p className="text-gray-700">Sun: 9:00 am – 11:30 pm</p>
+          <p className="text-gray-500 mt-2">Mon to Fri: 7:30 am – 1:00 am</p>
+          <p className="text-gray-500">Sat: 9:00 am – 1:00 am</p>
+          <p className="text-gray-500">Sun: 9:00 am – 11:30 pm</p>
         </div>
 
         {/* Dotted Line */}
@@ -58,9 +58,9 @@ const ContactTime = () => {
             />
           </div>
           <h3 className="text-lg font-bold tracking-wider text-black">LOCATION</h3>
-          <p className="text-gray-700 mt-2">85 Royal Mint Street</p>
-          <p className="text-gray-700">London, E1 8LG</p>
-          <p className="text-gray-700">United Kingdom</p>
+          <p className="text-gray-500 mt-2">85 Royal Mint Street</p>
+          <p className="text-gray-500">London, E1 8LG</p>
+          <p className="text-gray-500">United Kingdom</p>
         </div>
       </div>
     </div>

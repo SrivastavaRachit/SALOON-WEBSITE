@@ -86,7 +86,7 @@ const Services = () => {
             <Navbar className="text-black border-black" />
             <section className="min-h-screen pt-16 border-b border-black flex flex-col items-center">
                 <Banner
-                    title="Our Services"
+                    title="Service Menu"
                     description="Discover our range of top-quality salon services that bring out the best in you."
                     image={img}
                 />

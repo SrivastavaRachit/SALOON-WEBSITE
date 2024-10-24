@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { SlSocialFacebook,  SlSocialInstagram } from "react-icons/sl";
 
 const FollowUs = () => {
     return (
@@ -30,14 +30,16 @@ const FollowUs = () => {
                             className="hover:text-coral transition duration-300 ease-in-out"
                             aria-label="Facebook"
                         >
-                            <FaFacebookF />
+                                                            <SlSocialFacebook className="text-2xl text-black hover:text-blue-400 transition duration-300 cursor-pointer" />
+
                         </a>
                         <a
                             href="https://instagram.com"
                             className="hover:text-coral transition duration-300 ease-in-out"
                             aria-label="Instagram"
                         >
-                            <FaInstagram />
+                                                            <SlSocialInstagram className="text-2xl text-black hover:text-red-500 transition duration-300 cursor-pointer" />
+
                         </a>
                     </div>
                 </div>

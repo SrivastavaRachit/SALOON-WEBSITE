@@ -20,7 +20,7 @@ const ServiceHero = () => {
                     </h2>
 
                     {/* Icon Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-10">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 text-gray-400 lg:grid-cols-6 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-10">
                         <ServiceItem icon={<Lottie animationData={animationData} loop={true} />} title="Hair" />
                         <ServiceItem icon={<Lottie animationData={animationData2} loop={true} />} title="Skincare" />
                         <ServiceItem icon={<Lottie animationData={animationData3} loop={true} />} title="Manicure Pedicure" />
@@ -29,7 +29,7 @@ const ServiceHero = () => {
                         <ServiceItem icon={<Lottie animationData={animationData6} loop={true} />} title="Waxing" />
                     </div>
 
-                    <p className="text-gray-600 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">
+                    <p className="text-gray-400 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">
                         Get your nails done for a great mood. Simple pleasures can make your week, not just your day.
                     </p>
 

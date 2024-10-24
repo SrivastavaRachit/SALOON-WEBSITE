@@ -3,7 +3,7 @@ import Footer from '../../components/Footer/Footer';
 import Banner from '../../components/Banner/Banner';
 import img from '../../assets/b1.jpg';
 import React, { useEffect, useState } from 'react';
-import { FaCheckCircle } from 'react-icons/fa';
+import { BsSendCheckFill } from "react-icons/bs";
 import Calendar from '../../components/Calendar/Calendar';
 
 const BookAppointment = () => {
@@ -169,9 +169,9 @@ const BookAppointment = () => {
                                 </>
                             ) : (
                                 <div className="text-center">
-                                    <FaCheckCircle className="text-6xl text-coral mb-4" />
-                                    <h2 className="text-2xl font-bold">Appointment Booked!</h2>
-                                    <p>Your appointment has been successfully booked.</p>
+                                    <BsSendCheckFill className="text-6xl text-coral mb-4" />
+                                   <h2 className="text-2xl font-bold">WE HAVE RECIEVED YOUR MESSAGE!</h2>
+                                    <p>Please be on time we will be wating for you.</p>
                                 </div>
                             )}
                         </div>

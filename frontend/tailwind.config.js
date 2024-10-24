@@ -18,7 +18,7 @@ export default {
           purplish: '#bd0d50'
       },
       fontFamily: {
-        'playfair': ['Playfair Display', 'Indie Flower', 'Zeyada', 'serif', 'cursive'],
+        'playfair': ['DM Sans', 'Indie Flower', 'Zeyada', 'serif', ],
       },
     },
   },

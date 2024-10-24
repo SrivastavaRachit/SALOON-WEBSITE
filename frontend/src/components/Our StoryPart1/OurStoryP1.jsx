@@ -56,7 +56,7 @@ const Philosophy = () => {
             <div key={index} className="flex flex-col items-center text-center">
               <div className="mb-4">{item.icon}</div>
               <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-600">{item.description}</p>
+              <p className="text-gray-400">{item.description}</p>
             </div>
           ))}
         </div>
