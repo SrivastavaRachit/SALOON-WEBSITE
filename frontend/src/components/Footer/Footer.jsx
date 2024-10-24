@@ -2,6 +2,8 @@ import React from "react";
 import { SlSocialFacebook,  SlSocialInstagram } from "react-icons/sl";
 import img from '../../assets/Hexagon logo.png';
 import { NavLink } from "react-router-dom";
+import img1 from '../../assets/logo.png'
+
 
 const Footer = () => {
     return (
@@ -10,12 +12,16 @@ const Footer = () => {
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
                     {/* Logo and Brand Name */}
                     <div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
-                        <div className="relative flex items-center justify-center">
+                        <div className="relative flex space-y-0 items-center justify-center">
                             <div className="w-48 h-48 flex items-center justify-center">
                                 <NavLink to='/'>
-                                    <h3 className="text-3xl md:text-4xl text-gray-800 font-bold z-10" style={{ fontFamily: 'Zeyada' }}>
-                                        S A L O N
-                                    </h3>
+                                    <h3 className="text-3xl md:text-4xl text-gray-800 font-bold z-10" style={{ fontFamily: 'Zeyada', display: 'inline-block' }}>
+    S A L O N
+</h3>
+<img
+    src={img1} 
+    className="w-48 filter hue-rotate-270 saturate-150 inline-block"
+/>
                                 </NavLink>
                             </div>
                         </div>
