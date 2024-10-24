@@ -23,25 +23,28 @@ const ServicesPage = ({ activeService, heading, description, services, bgColor }
     return (
         <div className={`${bgColor} min-h-screen flex flex-col md:flex-row w-full`}>
             {/* Sidebar with Lottie icons */}
-            <div className="w-full md:w-1/4 bg-transparent flex flex-row md:flex-col items-center justify-around md:justify-center py-10 space-x-4 md:space-x-0 md:space-y-8 overflow-x-auto md:overflow-visible">
+            <div className="w-full md:w-1/4 bg-transparent flex flex-row md:flex-col items-center justify-around md:justify-center 
+            py-10 space-x-4 md:space-x-0 md:space-y-8 overflow-x-auto md:overflow-visible">
                 {serviceCategories.map((category, index) => (
                     <div key={index} className="text-center flex flex-col items-center justify-center">
-                        <div className="mb-2">
-                            <Lottie 
-                                animationData={category.animation} 
-                                loop={true} 
-                                style={{ 
-                                    width: '60px', 
-                                    height: '60px', 
-                                    display: 'flex',
-                                    justifyContent: 'center', 
-                                    alignItems: 'center' 
-                                }} 
-                            />
+                        <div key={index} className="text-center flex flex-col items-center justify-center mr-4 md:mr-0">
+                            <div className="mb-2">
+                                <Lottie
+                                    animationData={category.animation}
+                                    loop={true}
+                                    style={{
+                                        width: '60px',
+                                        height: '60px',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center'
+                                    }}
+                                />
+                            </div>
+                            <p className={`text-lg font-semibold ${activeService === category.name.toLowerCase() ? 'underline underline-offset-8' : ''}`}>
+                                {category.name}
+                            </p>
                         </div>
-                        <p className={`text-lg font-semibold ${activeService === category.name.toLowerCase() ? 'underline underline-offset-8' : ''}`}>
-                            {category.name}
-                        </p>
                     </div>
                 ))}
             </div>

@@ -1,7 +1,7 @@
 // InstagramSection.jsx
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import bg from '../../assets/bgInsta.jpg';
+
 import img1 from '../../assets/i1.jpg';
 import img2 from '../../assets/i2.jpg';
 import img3 from '../../assets/i3.jpg';
@@ -9,7 +9,7 @@ import img4 from '../../assets/i4.jpg';
 import img5 from '../../assets/i5.jpg';
 import img6 from '../../assets/i6.jpg';
 
-
+import bgInsta from '../../assets/bgInsta.jpg';
 
 const InstagramSection = () => {
   const imagesRef = useRef([]);
@@ -39,7 +39,7 @@ const InstagramSection = () => {
   return (
     <div className="relative min-h-screen bg-cover bg-center instagram-section">
       {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center " style={{ backgroundImage: `url(${bg})` }}></div>
+      <div className="absolute inset-0 bg-cover bg-center " style={{ backgroundImage: `url(${bgInsta})` }}></div>
 
       {/* Blur Box */}
       <div className="relative mx-auto max-w-5xl p-10  bg-white/30 backdrop-blur-lg rounded-lg shadow-lg">
@@ -87,9 +87,15 @@ const InstagramSection = () => {
 
         {/* Follow Button */}
         <div className="text-center mt-8">
-          <button className="border-2 border-dark font-bold text-dark px-8 py-3 rounded-lg hover:bg-coral hover:text-black transition duration-300">
-            FOLLOW US on Instagram @salon_insta
-          </button>
+        <a 
+            href="https://www.instagram.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <button className="border-2 border-dark font-bold text-dark px-8 py-3 rounded-lg hover:bg-coral hover:text-black transition duration-300">
+              FOLLOW US on Instagram @salon_insta
+            </button>
+          </a>
         </div>
       </div>
     </div>

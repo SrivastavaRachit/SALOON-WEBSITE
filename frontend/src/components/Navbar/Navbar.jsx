@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
+    const menuRef = useRef(null); // Reference to the menu
+    const buttonRef = useRef(null); // Reference to the toggle button
 
     // Custom handler to toggle the mobile menu
     const toggleMenu = () => {
@@ -18,6 +20,30 @@ const Navbar = () => {
 
     const isHomePage = location.pathname === '/';
 
+    useEffect(() => {
+        // Scroll to top when the Home component is loaded
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        // Close the menu if clicked outside
+        const handleClickOutside = (event) => {
+            if (
+                menuRef.current && 
+                !menuRef.current.contains(event.target) &&
+                buttonRef.current && 
+                !buttonRef.current.contains(event.target)
+            ) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
         <nav className={`absolute top-0 left-0 w-full py-4 px-6 md:px-12 flex justify-between items-center z-10 ${isHomePage ? 'bg-transparent' : 'bg-peach'} border-b border-white`}>
             {/* Logo */}
@@ -29,7 +55,6 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <ul className={`hidden md:flex space-x-8 ${isHomePage ? 'text-white' : 'text-black'}`}>
-                {/* Manually defining each nav item */}
                 <li className="relative">
                     <NavLink
                         to="/"
@@ -83,13 +108,13 @@ const Navbar = () => {
             </button>
 
             {/* Mobile Menu Toggle */}
-            <div className={`${isHomePage ? 'text-white' : 'text-black'} md:hidden cursor-pointer`} onClick={toggleMenu}>
+            <div ref={buttonRef} className={`${isHomePage ? 'text-white' : 'text-black'} md:hidden cursor-pointer`} onClick={toggleMenu}>
                 {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </div>
 
             {/* Mobile Navigation */}
             {isOpen && (
-                <ul className={`absolute top-full left-0 w-full ${isHomePage ? 'bg-peach' : 'bg-peach'} shadow-md py-4 flex flex-col items-center space-y-4 text-sm font-medium md:hidden ${isHomePage ? 'text-white' : 'text-black'}`}>
+                <ul ref={menuRef} className={`absolute top-full left-0 w-full ${isHomePage ? 'bg-peach' : 'bg-peach'} shadow-md py-4 flex flex-col items-center space-y-4 text-sm font-medium md:hidden ${isHomePage ? 'text-black' : 'text-black'}`}>
                     <li className={`${isHomePage ? 'hover:text-coral' : 'hover:text-dark'}`}>
                         <NavLink
                             to="/"
