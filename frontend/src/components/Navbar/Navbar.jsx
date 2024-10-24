@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -17,6 +17,11 @@ const Navbar = () => {
     };
 
     const isHomePage = location.pathname === '/';
+
+    useEffect(() => {
+        // Scroll to top when the Home component is loaded
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <nav className={`absolute top-0 left-0 w-full py-4 px-6 md:px-12 flex justify-between items-center z-10 ${isHomePage ? 'bg-transparent' : 'bg-peach'} border-b border-white`}>

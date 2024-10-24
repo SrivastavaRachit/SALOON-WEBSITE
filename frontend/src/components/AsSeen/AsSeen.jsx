@@ -1,6 +1,6 @@
 import React from 'react';
 import Loop from '../../components/Loop/Loop';
-
+import { Link } from 'react-router-dom';
 import BGCURVE from '../../assets/curveBG.jpg';
 
 const AsSeen = () => {
@@ -15,7 +15,7 @@ const AsSeen = () => {
                     backgroundPosition: 'center',
                 }}
             ></div>
-            
+
             {/* Dark overlay for contrast */}
             <div className="fixed w-full h-full bg-black opacity-40 z-1"></div>
 
@@ -29,7 +29,9 @@ const AsSeen = () => {
                     "The place with its constant excellence, soul, and style"
                 </p>
                 <button className="px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 font-semibold text-white border border-white rounded-xl hover:bg-white hover:text-gray-900 transition duration-300 ease-in-out">
-                    Learn More
+                    <Link to='/our-story'>
+                        Learn More
+                    </Link>
                 </button>
             </div>
         </section>

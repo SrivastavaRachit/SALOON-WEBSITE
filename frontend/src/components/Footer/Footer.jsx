@@ -1,9 +1,16 @@
-import React from "react";
-import { SlSocialFacebook,  SlSocialInstagram } from "react-icons/sl";
+import React, { useEffect } from "react";
+import { SlSocialFacebook, SlSocialInstagram } from "react-icons/sl";
 import img from '../../assets/Hexagon logo.png';
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
+
+    useEffect(() => {
+        // Scroll to top when the Home component is loaded
+        window.scrollTo(0, 0);
+    }, []);
+
+
     return (
         <>
             <footer className="bg-peach pt-10">
@@ -23,14 +30,15 @@ const Footer = () => {
 
                     {/* Center - Navigation Links */}
                     <div className="flex flex-col text-center md:text-left space-y-3 mb-6 md:mb-0">
-                        <NavLink to='/' className="font-semibold text-gray-800 hover:text-dark transition duration-300">Home</NavLink>
+                        <NavLink to='/' className="font-semibold text-gray-800 hover:text-dark transition duration-300"  onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
                         <NavLink to='/book' className="font-semibold text-gray-800 hover:text-dark transition duration-300">Book Online</NavLink>
                         <NavLink to='/service' className="font-semibold text-gray-800 hover:text-dark transition duration-300">Service Menu</NavLink>
                         <NavLink to='/our-story' className="font-semibold text-gray-800 hover:text-dark transition duration-300">Our Story</NavLink>
                     </div>
 
+
                     {/* Right side - Contact Us */}
-               <div className="text-center mr-10 justify-center md:text-right">
+                    <div className="text-center mr-10 justify-center md:text-right">
                         <NavLink to='/contact' className="font-bold text-lg text-black">Contact Us</NavLink>
                         <p className="text-gray-500 mt-2">
                             Don’t miss promotions, follow us <br />
